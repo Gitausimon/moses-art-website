@@ -6,6 +6,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
+import { ArrowDown } from "lucide-react";
+
 export default function Hero() {
   const containerRef = useRef(null);
   const imageRef = useRef(null);
@@ -52,13 +54,24 @@ export default function Hero() {
       />
       <div className="absolute inset-0 bg-transparent md:bg-black/30 z-10" />
 
-      <div ref={textRef} className="relative z-20" data-magnetic>
-        <p className="font-sans text-sm md:text-xl uppercase tracking-widest text-[#9C9C9C] mb-4">
-          The Work Of
-        </p>
-        <h1 className="font-display text-[15vw] leading-[0.8] tracking-tighter uppercase font-medium">
-          Moscatti
-        </h1>
+      <div ref={textRef} className="relative z-20 flex justify-between items-end w-full" data-magnetic>
+        <div>
+          <p className="font-sans text-sm md:text-xl uppercase tracking-widest text-[#9C9C9C] mb-4">
+            The Work Of
+          </p>
+          <h1 className="font-display text-[15vw] leading-[0.8] tracking-tighter uppercase font-medium">
+            Moscatti
+          </h1>
+        </div>
+        
+        <div className="hidden md:flex animate-bounce opacity-70 mb-4 items-center justify-center">
+          <ArrowDown size={24} strokeWidth={1.5} />
+        </div>
+      </div>
+      
+      {/* Mobile arrow positioned at bottom right */}
+      <div className="absolute bottom-8 right-8 z-20 animate-bounce opacity-70 md:hidden">
+        <ArrowDown size={20} strokeWidth={1.5} />
       </div>
     </section>
   );
