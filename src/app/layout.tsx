@@ -14,8 +14,14 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Moses Njuguna | Art Exhibition",
-  description: "Digital museum and portfolio of Moses Njuguna, a Kenyan painter.",
+  title: "Moscatti | Virtual Art Gallery & Portfolio",
+  description: "Immersive 3D digital museum and painting portfolio of Moses Njuguna (Moscatti), a contemporary artist based in Nairobi, Kenya.",
+  keywords: ["Moscatti", "Moses Njuguna", "Kenyan Artist", "Contemporary Art", "Virtual Gallery", "3D Museum", "Paintings", "Nairobi Artist"],
+  openGraph: {
+    title: "Moscatti | Contemporary Virtual Art Gallery",
+    description: "Explore the abstract and vibrant works of Moscatti in this immersive 3D web experience.",
+    type: "website",
+  }
 };
 
 export default function RootLayout({

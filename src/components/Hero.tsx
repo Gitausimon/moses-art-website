@@ -56,8 +56,8 @@ export default function Hero() {
 
       <div ref={textRef} className="relative z-20 flex justify-between items-end w-full" data-magnetic>
         <div>
-          <p className="font-sans text-sm md:text-xl uppercase tracking-widest text-[#9C9C9C] mb-4">
-            The Work Of
+          <p className="font-sans text-sm md:text-lg uppercase tracking-widest text-[#9C9C9C] mb-4">
+            Where Emotion Meets Canvas
           </p>
           <h1 className="font-display text-[15vw] leading-[0.8] tracking-tighter uppercase font-medium">
             Moscatti

@@ -82,9 +82,14 @@ export function AboutContact() {
           <p className="mb-8">
             Moses Njuguna is a 21-year-old contemporary artist based in Nairobi, Kenya. His work relies heavily on abstraction and bold color fields to synthesize his environment.
           </p>
-          <a href="mailto:contact@mosesnjuguna.art" className="uppercase tracking-widest text-white border-b border-white hover:text-gray-300 w-max transition-colors" data-magnetic>
-            contact@mosesnjuguna.art
-          </a>
+          <div className="flex flex-col gap-4">
+            <a href="mailto:contact@mosesnjuguna.art" className="uppercase tracking-widest text-white border-b border-white hover:text-gray-300 w-max transition-colors pb-1" data-magnetic>
+              contact@mosesnjuguna.art
+            </a>
+            <a href="https://wa.me/254700000000" target="_blank" rel="noopener noreferrer" className="uppercase tracking-widest text-white border-b border-white hover:text-gray-300 w-max transition-colors pb-1" data-magnetic>
+              WhatsApp
+            </a>
+          </div>
         </div>
       </div>
       
