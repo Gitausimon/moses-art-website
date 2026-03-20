@@ -66,7 +66,15 @@ export function AboutContact() {
         
         <div className="lg:col-span-4 order-1 lg:order-2">
             <div className="w-full aspect-[3/4] bg-[#111] flex items-center justify-center relative overflow-hidden">
-                <img src="/njuguna-picture.jpg" alt="Moses Njuguna" className="absolute inset-0 w-full h-full object-cover grayscale hover:grayscale-0 active:grayscale-0 transition-all duration-700 z-10 cursor-pointer" onTouchStart={() => {}} />
+                <img 
+                  src="/njuguna-picture.jpg" 
+                  alt="Moses Njuguna" 
+                  className="absolute inset-0 w-full h-full object-cover grayscale hover:grayscale-0 active:grayscale-0 transition-all duration-700 z-10 cursor-pointer select-none" 
+                  draggable={false}
+                  onContextMenu={(e) => e.preventDefault()}
+                  onTouchStart={() => {}}
+                  style={{ WebkitTouchCallout: "none" }}
+                />
             </div>
         </div>
 
