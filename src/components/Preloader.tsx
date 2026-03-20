@@ -10,7 +10,7 @@ export default function Preloader() {
 
   const words = [
     ".Hello", ".hola", ".bonjour", ".ciao", ".こんにちは", ".你好",
-    ".WELCOME", ".TO", ".THE", ".EXHIBITION", "MOSES", "NJUGUNA"
+    ".WELCOME", ".TO", ".THE", ".EXHIBITION", "MOSCATTI"
   ];
 
   useEffect(() => {
