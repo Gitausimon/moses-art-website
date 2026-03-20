@@ -45,7 +45,7 @@ export default function Hero() {
     <section
       id="home"
       ref={containerRef}
-      className="relative w-full h-screen overflow-hidden flex flex-col justify-end bg-black text-white px-8 pb-16 md:px-16"
+      className="relative w-full h-[100dvh] overflow-hidden flex flex-col justify-end bg-black text-white px-8 pb-16 md:px-16"
     >
       <div
         ref={imageRef}
@@ -70,8 +70,8 @@ export default function Hero() {
       </div>
       
       {/* Mobile arrow positioned at bottom right */}
-      <div className="absolute bottom-8 right-8 z-20 animate-bounce opacity-70 md:hidden">
-        <ArrowDown size={20} strokeWidth={1.5} />
+      <div className="absolute bottom-14 right-8 z-20 animate-bounce opacity-70 md:hidden pb-4">
+        <ArrowDown size={28} strokeWidth={1.5} />
       </div>
     </section>
   );
