@@ -47,10 +47,10 @@ export default function Hero() {
     >
       <div
         ref={imageRef}
-        className="absolute inset-0 z-0 bg-cover bg-center opacity-60"
+        className="absolute inset-0 z-0 bg-cover bg-center opacity-100 md:opacity-60"
         style={{ backgroundImage: `url('/mose_hero.png')` }}
       />
-      <div className="absolute inset-0 bg-black/30 z-10" />
+      <div className="absolute inset-0 bg-transparent md:bg-black/30 z-10" />
 
       <div ref={textRef} className="relative z-20" data-magnetic>
         <p className="font-sans text-sm md:text-xl uppercase tracking-widest text-[#9C9C9C] mb-4">
