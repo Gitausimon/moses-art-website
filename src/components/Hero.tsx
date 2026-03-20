@@ -40,24 +40,24 @@ export default function Hero() {
   }, []);
 
   return (
-    <section 
+    <section
       id="home"
       ref={containerRef}
       className="relative w-full h-screen overflow-hidden flex flex-col justify-end bg-black text-white px-8 pb-16 md:px-16"
     >
-      <div 
+      <div
         ref={imageRef}
         className="absolute inset-0 z-0 bg-cover bg-center opacity-60"
         style={{ backgroundImage: `url('/mose_hero.png')` }}
       />
       <div className="absolute inset-0 bg-black/30 z-10" />
-      
+
       <div ref={textRef} className="relative z-20" data-magnetic>
         <p className="font-sans text-sm md:text-xl uppercase tracking-widest text-[#9C9C9C] mb-4">
           The Work Of
         </p>
         <h1 className="font-display text-[15vw] leading-[0.8] tracking-tighter uppercase font-medium">
-          Moses <br/> Njuguna
+          Moscatti
         </h1>
       </div>
     </section>
