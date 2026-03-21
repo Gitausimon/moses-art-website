@@ -9,6 +9,15 @@ export default function VirtualGalleryCTA() {
   const buttonRef = useRef<HTMLButtonElement>(null);
   const textRef = useRef<HTMLSpanElement>(null);
   const [isOpen, setIsOpen] = useState(false);
+  const [isEntering, setIsEntering] = useState(false);
+
+  const handleEnterClick = () => {
+    setIsEntering(true);
+    setTimeout(() => {
+      setIsOpen(true);
+      setIsEntering(false);
+    }, 2500);
+  };
 
   useEffect(() => {
     const btn = buttonRef.current;
@@ -51,44 +60,54 @@ export default function VirtualGalleryCTA() {
   }, [isOpen]);
 
   useEffect(() => {
-    if (isOpen) {
+    if (isOpen || isEntering) {
       document.body.style.overflow = "hidden"; // Prevent scrolling behind overlay
     } else {
       document.body.style.overflow = "";
     }
-  }, [isOpen]);
+  }, [isOpen, isEntering]);
 
   return (
     <>
       <section className="h-[80vh] w-full bg-black text-white flex flex-col items-center justify-center relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-0 pointer-events-none" />
         
-        <p className="font-sans uppercase tracking-widest text-[#9C9C9C] mb-8 z-10 text-sm md:text-base">
-          Immersive Experience
+        <p className="font-sans uppercase tracking-widest text-[#9C9C9C] mb-8 z-10 text-sm md:text-base animate-pulse">
+          Step inside the exhibition
         </p>
         
         <button 
           ref={buttonRef}
-          onClick={() => setIsOpen(true)}
-          className="relative z-10 w-[30vh] h-[30vh] rounded-full border border-white/20 flex items-center justify-center group overflow-hidden bg-transparent hover:bg-white hover:text-black transition-colors duration-500"
+          onClick={handleEnterClick}
+          className="relative z-10 w-[30vh] h-[30vh] md:w-[35vh] md:h-[35vh] rounded-full border border-white/20 flex items-center justify-center group overflow-hidden bg-transparent hover:bg-white hover:text-black transition-all duration-700 shadow-[0_0_40px_rgba(255,255,255,0.05)] hover:shadow-[0_0_80px_rgba(255,255,255,0.2)]"
           data-magnetic
         >
           <div className="absolute inset-0 bg-white scale-0 rounded-full group-hover:scale-100 transition-transform duration-500 ease-in-out origin-center" />
-          <span ref={textRef} className="font-display text-2xl md:text-3xl uppercase text-center max-w-[80%] relative z-20 transition-colors duration-500">
+          <span ref={textRef} className="font-display text-2xl md:text-4xl uppercase text-center max-w-[80%] relative z-20 transition-colors duration-500">
             Enter The <br/> Virtual Gallery
           </span>
         </button>
       </section>
 
+      {/* Cinematic Entry Overlay */}
+      {isEntering && (
+        <div className="fixed inset-0 z-[99999] bg-black flex items-center justify-center animate-fade-in duration-1000">
+          <p className="font-sans text-[#9C9C9C] tracking-[0.3em] uppercase animate-pulse text-sm md:text-xl text-center px-8">
+            Entering MossCatti Virtual Gallery...
+          </p>
+        </div>
+      )}
+
       {/* Fullscreen 3D Gallery Overlay */}
       {isOpen && (
-        <div className="fixed inset-0 z-[99999] bg-black bg-opacity-95 flex items-center justify-center animate-fade-in">
+        <div className="fixed inset-0 z-[99999] bg-black flex items-center justify-center animate-fade-in duration-1000">
           <button 
             onClick={() => setIsOpen(false)}
-            className="absolute top-8 right-8 z-50 p-4 bg-white/10 hover:bg-white/20 rounded-full text-white transition-colors backdrop-blur-sm group"
+            className="absolute top-8 right-8 md:top-12 md:right-12 z-50 px-6 py-4 bg-white/10 hover:bg-white/20 rounded-full text-white transition-colors backdrop-blur-sm flex items-center gap-3 border border-white/10 group"
             data-magnetic
           >
-            <X size={32} className="group-hover:rotate-90 transition-transform duration-300"/>
+            <span className="font-sans uppercase tracking-widest text-xs hidden md:block">Back to Gallery</span>
+            <X size={20} className="group-hover:rotate-90 transition-transform duration-300"/>
           </button>
           
           <div className="w-full h-full p-4 md:p-12 pb-24 md:pb-12 h-screen flex flex-col items-center justify-center">
