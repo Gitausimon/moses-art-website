@@ -105,7 +105,7 @@ export default function HorizontalGallery() {
             <h2 className="font-display text-4xl md:text-6xl uppercase mb-2">{selectedArt.title}</h2>
             <p className="font-sans text-[#9C9C9C] tracking-widest uppercase text-sm md:text-base mb-8">{selectedArt.year}</p>
             <a 
-              href={`https://wa.me/254700000000?text=Hello Moscatti, I am interested in purchasing the artwork: ${selectedArt.title}`} 
+              href={`https://wa.me/254758585413?text=Hello Moscatti, I am interested in purchasing the artwork: ${selectedArt.title}`} 
               target="_blank" 
               rel="noopener noreferrer" 
               className="border border-white/30 px-8 py-4 uppercase tracking-widest text-sm hover:bg-white hover:text-black transition-colors rounded-full"

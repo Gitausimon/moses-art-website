@@ -86,7 +86,7 @@ export function AboutContact() {
             <a href="mailto:contact@mosesnjuguna.art" className="uppercase tracking-widest text-white border-b border-white hover:text-gray-300 w-max transition-colors pb-1" data-magnetic>
               contact@mosesnjuguna.art
             </a>
-            <a href="https://wa.me/254700000000" target="_blank" rel="noopener noreferrer" className="uppercase tracking-widest text-white border-b border-white hover:text-gray-300 w-max transition-colors pb-1" data-magnetic>
+            <a href="https://wa.me/254758585413" target="_blank" rel="noopener noreferrer" className="uppercase tracking-widest text-white border-b border-white hover:text-gray-300 w-max transition-colors pb-1" data-magnetic>
               WhatsApp
             </a>
           </div>
