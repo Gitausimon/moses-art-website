@@ -18,12 +18,12 @@ export function Exhibitions() {
   useEffect(() => {
     const items = gsap.utils.toArray(".exhibition-item");
     items.forEach((item: any) => {
-      gsap.fromTo(item, 
+      gsap.fromTo(item,
         { autoAlpha: 0, y: 50 },
-        { 
-          autoAlpha: 1, 
-          y: 0, 
-          duration: 1, 
+        {
+          autoAlpha: 1,
+          y: 0,
+          duration: 1,
           ease: "power3.out",
           scrollTrigger: {
             trigger: item,
@@ -63,19 +63,19 @@ export function AboutContact() {
         <div className="lg:col-span-5 font-display text-4xl md:text-5xl leading-tight flex flex-col justify-center order-2 lg:order-1">
           "I paint to explore the silent conversations between chaos and clarity. Every brushstroke is a reaction to the vibrant tempo of Nairobi."
         </div>
-        
+
         <div className="lg:col-span-4 order-1 lg:order-2">
-            <div className="w-full aspect-[3/4] bg-[#111] flex items-center justify-center relative overflow-hidden">
-                <img 
-                  src="/njuguna-picture.jpg" 
-                  alt="Moses Njuguna" 
-                  className="absolute inset-0 w-full h-full object-cover grayscale hover:grayscale-0 active:grayscale-0 transition-all duration-700 z-10 cursor-pointer select-none" 
-                  draggable={false}
-                  onContextMenu={(e) => e.preventDefault()}
-                  onTouchStart={() => {}}
-                  style={{ WebkitTouchCallout: "none" }}
-                />
-            </div>
+          <div className="w-full aspect-[3/4] bg-[#111] flex items-center justify-center relative overflow-hidden">
+            <img
+              src="/njuguna-picture.jpg"
+              alt="Moses Njuguna"
+              className="absolute inset-0 w-full h-full object-cover grayscale hover:grayscale-0 active:grayscale-0 transition-all duration-700 z-10 cursor-pointer select-none"
+              draggable={false}
+              onContextMenu={(e) => e.preventDefault()}
+              onTouchStart={() => { }}
+              style={{ WebkitTouchCallout: "none" }}
+            />
+          </div>
         </div>
 
         <div className="lg:col-span-3 font-sans text-[#9C9C9C] text-lg leading-relaxed flex flex-col justify-end order-3">
@@ -92,7 +92,7 @@ export function AboutContact() {
           </div>
         </div>
       </div>
-      
+
       <div className="flex flex-col md:flex-row justify-between items-end mt-32 border-t border-white/20 pt-8">
         <div className="flex gap-8 mb-8 md:mb-0">
           <a href="https://www.instagram.com/mos._.catti/" target="_blank" rel="noopener noreferrer" className="uppercase tracking-widest text-[#9C9C9C] hover:text-white transition-colors text-sm" data-magnetic>Instagram</a>
